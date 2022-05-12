@@ -41,7 +41,6 @@ public class User {
 	
 	
 
-	@Size(max = 65)
 	@Embedded
 	private Address address;
 	
@@ -57,7 +56,6 @@ public class User {
 	
 	
 
-	@Size(max = 120)
 	@Embedded
 	private Company company;
 	
