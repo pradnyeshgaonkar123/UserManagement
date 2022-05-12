@@ -61,5 +61,32 @@ public class User {
 	
 	
 	
+
+
+
+
+	public User(Long id, @Size(max = 65) String name, @Size(max = 65) @NotNull String username,
+			@NotNull @Size(max = 120) @Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}") String email,
+			Address address, @Size(max = 120) @NotNull String phone, @Size(max = 120) String website, Company company) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.username = username;
+		this.email = email;
+		this.address = address;
+		this.phone = phone;
+		this.website = website;
+		this.company = company;
+	}
+
+
+
+	public User() {
+		super();
+	}
+	
+	
+	
+	
 	
 }
