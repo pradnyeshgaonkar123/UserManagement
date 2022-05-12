@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -28,12 +29,14 @@ public class User {
 
 	@Size(max = 65)
 	@Column(unique = true)
+	@NotNull
 	private String username;
 	
 	
 	@NotNull
 	@Size(max = 120)
 	@Column(unique = true)
+	@Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
 	private String email;
 	
 	
@@ -44,6 +47,8 @@ public class User {
 	
 
 	@Size(max = 120)
+	@Column(unique = true)
+	@NotNull
 	private String phone;
 	
 	
